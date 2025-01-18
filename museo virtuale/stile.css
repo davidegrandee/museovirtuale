@@ -1,0 +1,145 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #fff;
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+header {
+    background: linear-gradient(90deg, #d32f2f, #f06292);
+    color: rgb(255, 255, 255);
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    animation: slideIn 1s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+main {
+    padding: 20px;
+    animation: fadeIn 1s ease-out 0.5s forwards;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: contentSlide 1s ease-out 0.5s forwards;
+}
+
+@keyframes contentSlide {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.description {
+    max-width: 60%;
+    animation: fadeIn 1s ease-out 0.5s forwards;
+}
+
+h2 {
+    color: #d32f2f;
+    animation: fadeIn 1s ease-out 0.5s forwards;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    animation: fadeIn 1s ease-out 0.5s forwards;
+}
+
+li {
+    font-size: 20px;
+}
+
+img {
+    border: 5px solid #d32f2f;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 400px;
+    height: auto;
+    opacity: 0;
+    transform: scale(0.8);
+    animation: scaleUp 1s ease-out 1.5s forwards;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@keyframes scaleUp {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+img:active {
+    transform: scale(1.05); /* Effetto quando toccata (click o touch) */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+}
+
+.back-button {
+    display: inline-block;
+    background-color: #d32f2f;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: buttonSlide 1s ease-out 1.5s forwards;
+}
+
+@keyframes buttonSlide {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.back-button:hover {
+    background-color: #f06292;
+}
